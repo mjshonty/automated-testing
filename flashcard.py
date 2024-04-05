@@ -12,4 +12,16 @@ def hobbit_flashcard():
 
         
 # Code to test the flashcard function
+def test_correct(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda x: "mountain")
+    correct = hobbit_flashcard()
+    assert correct == "Correct"
+    pass
+
+def test_correct(monkeypatch):
+    monkeypatch.setattr('builtins.input', lambda x: "a ring")
+    incorrect = hobbit_flashcard()
+    assert incorrect == "Incorrect"
+    pass
+
 

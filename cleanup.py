@@ -14,4 +14,6 @@ def cleanup(message):
 # Test cases
 
 def test_cleanup():
+    x = "damn this shit to hell"
+    assert cleanup(x) == "darn this poop to hades"
     pass
